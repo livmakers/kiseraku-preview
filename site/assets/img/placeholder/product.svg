@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="写真準備中">
+  <rect width="600" height="600" fill="#F5F3F8"/>
+  <rect x="10" y="10" width="580" height="580" fill="none" stroke="#E2DDEB" stroke-width="2" stroke-dasharray="8 8" rx="14"/>
+  <g stroke="#A88ECF" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".55" transform="translate(180 150) scale(10)">
+    <path d="M8 3 5 5v16h14V5l-3-2-2 2h-4L8 3z"/>
+    <path d="M12 5v16" stroke-dasharray="2.6 2.2"/>
+  </g>
+  <text x="300" y="452" text-anchor="middle" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',sans-serif" font-size="28" fill="#5B6469" letter-spacing="4">写真準備中</text>
+</svg>
