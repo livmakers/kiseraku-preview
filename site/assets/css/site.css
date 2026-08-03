@@ -103,16 +103,9 @@ table { border-collapse: collapse; width: 100%; }
 .hb-bg { position: absolute; inset: 0; }
 .hb-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .hb-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255, 240, 246, .16) 30%, rgba(255, 240, 246, .58) 100%); }
-.hb-type { position: absolute; top: clamp(14px, 3.4vw, 40px); left: 0; width: 100%; z-index: 2; font-family: var(--display); font-weight: 800; font-size: clamp(52px, 11vw, 148px); line-height: .96; letter-spacing: .015em; color: #fff; padding-inline: 4vw; user-select: none; }
-.hb-type .ltr { display: inline-block; text-shadow: 0 3px 0 rgba(192, 82, 111, .5), 0 10px 26px rgba(170, 70, 100, .42), 0 22px 60px rgba(192, 82, 111, .28); }
-.hb-type .ltr:nth-child(odd) { transform: translateY(-.02em); }
-.hb-type small { display: block; font-family: var(--display-sub); font-size: clamp(13px, 1.8vw, 19px); font-weight: 600; letter-spacing: .5em; margin: 8px 0 0 6px; color: #fff; opacity: .96; text-shadow: 0 2px 12px rgba(192, 82, 111, .5); }
-@media (prefers-reduced-motion: no-preference) {
-  .hb-type .ltr { animation: ltr-in .7s cubic-bezier(.22, 1.4, .36, 1) both; animation-delay: calc(var(--d) * 55ms); }
-  @keyframes ltr-in { from { opacity: 0; transform: translateY(.35em) scale(.92); } to { opacity: 1; transform: translateY(0) scale(1); } }
-  .hb-type .ltr:nth-child(odd) { animation-name: ltr-in-hi; }
-  @keyframes ltr-in-hi { from { opacity: 0; transform: translateY(.35em) scale(.92); } to { opacity: 1; transform: translateY(-.02em) scale(1); } }
-}
+/* 隅の控えめロゴ配置（左上） */
+.hb-type { position: absolute; top: clamp(16px, 2.6vw, 30px); left: clamp(16px, 3vw, 40px); z-index: 2; font-family: var(--display); font-weight: 700; font-size: clamp(20px, 2.6vw, 34px); line-height: 1.1; letter-spacing: .14em; color: #fff; text-shadow: 0 1px 3px rgba(60, 45, 50, .35), 0 4px 18px rgba(60, 45, 50, .25); user-select: none; }
+.hb-type small { display: block; font-family: var(--display-sub); font-size: clamp(10px, 1.1vw, 12.5px); font-weight: 600; letter-spacing: .3em; margin-top: 3px; color: #fff; opacity: .95; }
 .hb-products { position: absolute; right: clamp(10px, 4vw, 64px); bottom: clamp(66px, 9vw, 96px); z-index: 2; display: flex; gap: clamp(8px, 1.6vw, 18px); align-items: flex-end; }
 .hb-products figure { width: clamp(86px, 13vw, 190px); background: #fff; padding: 6px 6px 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, .22); }
 .hb-products figure:nth-child(1) { transform: rotate(-3deg); }
