@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="写真準備中">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F5F3F8"/>
-      <stop offset="1" stop-color="#EAE5F2"/>
+      <stop offset="0" stop-color="#FBF0F4"/>
+      <stop offset="1" stop-color="#F6E3EA"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="720" fill="url(#g)"/>
