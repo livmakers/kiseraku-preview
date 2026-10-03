@@ -234,6 +234,19 @@ table { border-collapse: collapse; width: 100%; }
 .pd-note { font-size: 11.5px; color: var(--ink-soft); }
 .spec-table th { text-align: left; font-weight: 700; font-size: 12.5px; color: var(--ink-soft); padding: 10px 14px; width: 9em; background: var(--paper-alt); border-bottom: 2px solid #fff; vertical-align: top; }
 .spec-table td { padding: 10px 14px; font-size: 13.5px; border-bottom: 1px solid var(--line); }
+/* 特徴ボックス（商品トップ内のコンパクト商品紹介） */
+.feat { margin: 16px 0 4px; border: 1px solid var(--line); border-radius: 14px; background: #fff; overflow: hidden; }
+.feat-head { display: flex; align-items: center; gap: 6px; background: var(--rose-soft); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: .06em; padding: 8px 14px; }
+.feat-list { list-style: none; margin: 0; padding: 6px 14px 10px; }
+.feat-list li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.feat-list li:last-child { border-bottom: 0; }
+.feat-icon { flex: 0 0 auto; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--lilac-soft); color: var(--brand-deep); margin-top: 2px; }
+.feat-list li:nth-child(3n+2) .feat-icon { background: var(--sun-soft); color: #B07C1E; }
+.feat-list li:nth-child(3n) .feat-icon { background: var(--coral-soft); color: #C56A50; }
+.feat-body { display: grid; gap: 1px; }
+.feat-body b { font-size: 13.5px; line-height: 1.6; }
+.feat-body small { font-size: 12px; color: var(--ink-soft); line-height: 1.7; }
+
 /* 商品紹介コンテンツ（A+風） */
 .aplus { padding: clamp(40px, 6vw, 70px) 0; background: var(--paper); border-top: 1px solid var(--line); }
 .aplus-row { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(20px, 3.5vw, 48px); align-items: center; margin-bottom: clamp(26px, 4vw, 44px); }
