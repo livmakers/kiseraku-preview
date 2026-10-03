@@ -23,7 +23,7 @@
   --display: "Baloo 2", "Quicksand", "Zen Kaku Gothic New", "Arial", var(--sans);
   --display-sub: "Quicksand", "Zen Kaku Gothic New", "Arial", var(--sans);
   --radius: 4px;
-  --wrap: 1160px;
+  --wrap: 1400px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -85,7 +85,7 @@ table { border-collapse: collapse; width: 100%; }
 .mnav nav a:hover { background: var(--paper-alt); }
 
 /* ---------- セクション共通（EN大見出し＋JP小サブ） ---------- */
-.section { position: relative; padding: clamp(44px, 7vw, 76px) 0; overflow: hidden; }
+.section { position: relative; padding: clamp(36px, 5vw, 60px) 0; overflow: hidden; }
 .section-alt { background: var(--paper-alt); }
 .sec-head { margin-bottom: clamp(22px, 3.5vw, 36px); }
 .sec-en { display: block; font-family: var(--display); font-size: clamp(21px, 2.8vw, 28px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); line-height: 1.4; }
@@ -93,21 +93,21 @@ table { border-collapse: collapse; width: 100%; }
 .sec-lead { margin-top: 12px; color: var(--ink-soft); font-size: 13.5px; max-width: 46em; }
 .deco { display: none; }
 .page-title { font-size: clamp(21px, 3vw, 27px); font-weight: 700; margin-bottom: 6px; }
-.breadcrumb { font-size: 12px; color: var(--ink-soft); padding: 14px 0 0; }
+.breadcrumb { font-size: 12px; color: var(--ink-soft); padding-top: 14px; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; }
 .breadcrumb li + li::before { content: "/"; margin-right: 6px; color: var(--line); }
 .breadcrumb a { color: var(--ink-soft); }
 
 /* ---------- ヒーローバナー（明るい陽光写真×丸みのあるタイポ） ---------- */
-.hero-banner { position: relative; overflow: hidden; min-height: clamp(400px, 56vw, 580px); display: flex; align-items: flex-end; background: #F3EDE2; }
+.hero-banner { position: relative; overflow: hidden; min-height: clamp(260px, 26vw, 400px); display: flex; align-items: flex-end; background: #F3EDE2; }
 .hb-bg { position: absolute; inset: 0; }
 .hb-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .hb-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255, 240, 246, .16) 30%, rgba(255, 240, 246, .58) 100%); }
 /* 隅の控えめロゴ配置（左上） */
 .hb-type { position: absolute; top: clamp(16px, 2.6vw, 30px); left: clamp(16px, 3vw, 40px); z-index: 2; font-family: var(--display); font-weight: 700; font-size: clamp(20px, 2.6vw, 34px); line-height: 1.1; letter-spacing: .14em; color: #fff; text-shadow: 0 1px 3px rgba(60, 45, 50, .35), 0 4px 18px rgba(60, 45, 50, .25); user-select: none; }
 .hb-type small { display: block; font-family: var(--display-sub); font-size: clamp(10px, 1.1vw, 12.5px); font-weight: 600; letter-spacing: .3em; margin-top: 3px; color: #fff; opacity: .95; }
-.hb-products { position: absolute; right: clamp(10px, 4vw, 64px); bottom: clamp(66px, 9vw, 96px); z-index: 2; display: flex; gap: clamp(8px, 1.6vw, 18px); align-items: flex-end; }
-.hb-products figure { width: clamp(86px, 13vw, 190px); background: #fff; padding: 6px 6px 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, .22); }
+.hb-products { position: absolute; right: clamp(10px, 4vw, 64px); bottom: clamp(60px, 7vw, 84px); z-index: 2; display: flex; gap: clamp(8px, 1.4vw, 16px); align-items: flex-end; }
+.hb-products figure { width: clamp(76px, 9vw, 140px); background: #fff; padding: 5px 5px 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, .22); }
 .hb-products figure:nth-child(1) { transform: rotate(-3deg); }
 .hb-products figure:nth-child(2) { transform: translateY(-14px); }
 .hb-products figure:nth-child(3) { transform: rotate(3deg); }
@@ -126,9 +126,10 @@ table { border-collapse: collapse; width: 100%; }
 .btn[disabled], .btn[aria-disabled="true"] { background: #F0EDE6; border-color: #F0EDE6; color: #A9A294; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
 .btn-lg { min-height: 54px; padding: 14px 38px; font-size: 15px; }
 
-/* ---------- 困りごとタイル（明るい色チップ） ---------- */
+/* ---------- 困りごとタイル（明るい色チップ・コンパクト） ---------- */
 .trouble-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.trouble-card { position: relative; display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px; min-height: 88px; text-decoration: none; color: var(--ink); transition: transform .2s, box-shadow .2s; }
+@media (min-width: 1200px) { .trouble-grid { grid-template-columns: repeat(6, 1fr); } .trouble-card::after { display: none; } }
+.trouble-card { position: relative; display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; min-height: 72px; text-decoration: none; color: var(--ink); transition: transform .2s, box-shadow .2s; }
 .trouble-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(192, 82, 111, .13); }
 .trouble-icon { flex: 0 0 auto; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--rose-soft); color: var(--brand-deep); }
 .trouble-card:nth-child(3n+2) .trouble-icon { background: var(--sun-soft); color: #B07C1E; }
@@ -137,8 +138,8 @@ table { border-collapse: collapse; width: 100%; }
 .trouble-short { display: block; font-size: 11.5px; font-weight: 400; color: var(--ink-soft); }
 .trouble-card::after { content: "→"; margin-left: auto; color: var(--ink-soft); }
 
-/* ---------- 商品カード（枠線レス・写真直置き） ---------- */
-.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 34px) clamp(14px, 2vw, 26px); }
+/* ---------- 商品カード（枠線レス・写真直置き・商品が主役） ---------- */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: clamp(20px, 2.6vw, 36px) clamp(14px, 1.6vw, 24px); }
 .card { background: transparent; }
 .card-link { display: block; color: inherit; text-decoration: none; }
 .card-img { position: relative; background: #fff; }
@@ -153,7 +154,7 @@ table { border-collapse: collapse; width: 100%; }
 .card-price { padding: 2px 0 0; }
 .card .raku { margin: 8px 0 0; }
 .card .fbadges { padding: 8px 0 0; }
-.price b { font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.price b { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--brand-deep); }
 .price small { color: var(--ink-soft); font-size: 11px; margin-left: 3px; }
 .price-tbd { font-size: 12.5px; color: var(--ink-soft); }
 
@@ -193,7 +194,7 @@ table { border-collapse: collapse; width: 100%; }
 .photo-strip-lead { margin-top: 8px; font-size: 12.5px; color: var(--ink-soft); }
 
 /* カテゴリカード */
-.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
 .cat-card { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; min-height: 84px; color: var(--ink); text-decoration: none; transition: transform .2s, box-shadow .2s; }
 .cat-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(192, 82, 111, .13); }
 .cat-card .trouble-icon { width: 46px; height: 46px; }
