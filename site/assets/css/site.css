@@ -28,6 +28,13 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+
+/* 超ワイド画面（4K・ウルトラワイド）では全体を段階的に等倍拡大し、
+   どの画面サイズでも商品が主役の見え方を保つ */
+@media (min-width: 1800px) { body { zoom: 1.2; } }
+@media (min-width: 2300px) { body { zoom: 1.5; } }
+@media (min-width: 2900px) { body { zoom: 1.85; } }
+@media (min-width: 3500px) { body { zoom: 2.25; } }
 body {
   font-family: var(--sans);
   font-size: 15px;
