@@ -169,6 +169,51 @@ table { border-collapse: collapse; width: 100%; }
 .fbadges { display: flex; flex-wrap: wrap; gap: 4px 10px; }
 .fbadge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--ink-soft); }
 
+/* ---------- 特集バナー（トップ・大型） ---------- */
+.tokushu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 24px); margin-top: clamp(28px, 4vw, 44px); }
+.tokushu-banner { position: relative; display: flex; align-items: center; min-height: clamp(220px, 20vw, 300px); border-radius: 20px; overflow: hidden; text-decoration: none; color: #fff; transition: transform .25s, box-shadow .25s; }
+.tokushu-banner:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(110, 70, 90, .25); }
+.tb-rose { background: linear-gradient(115deg, #A8405C, #C9607B 60%, #D9798F); }
+.tb-lilac { background: linear-gradient(115deg, #52416C, #7A659B 60%, #8A76AD); }
+/* 写真素材の透かし（デスクトップ0.45基準） */
+.tb-bg { position: absolute; inset: 0; pointer-events: none; }
+.tb-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .45; transition: transform 2.5s ease, opacity .3s; }
+.tokushu-banner:hover .tb-bg img { transform: scale(1.05); opacity: .52; }
+.tb-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(40, 18, 28, .55), rgba(40, 18, 28, .12) 55%, transparent); }
+.tb-mark { position: absolute; right: -46px; bottom: -58px; opacity: .16; color: #fff; pointer-events: none; z-index: 1; }
+.tb-text { position: relative; z-index: 2; display: grid; gap: 6px; padding: clamp(20px, 2.6vw, 36px); max-width: 34em; }
+.tb-en { display: inline-flex; align-items: center; gap: 6px; font-family: var(--display); font-size: 11.5px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; opacity: .9; }
+.tb-title { font-size: clamp(24px, 2.8vw, 36px); font-weight: 900; letter-spacing: .04em; text-shadow: 0 2px 14px rgba(0, 0, 0, .18); }
+.tb-copy { font-size: clamp(12px, 1.2vw, 14px); opacity: .95; line-height: 1.8; }
+.tb-cta { justify-self: start; margin-top: 8px; background: #fff; color: var(--ink); font-size: 13px; font-weight: 700; border-radius: 999px; padding: 9px 20px; transition: transform .2s; }
+.tokushu-banner:hover .tb-cta { transform: translateX(4px); }
+
+/* ---------- 特集ページ ヒーロー ---------- */
+.fhero { position: relative; overflow: hidden; color: #fff; padding: clamp(40px, 5.5vw, 76px) 0 clamp(36px, 5vw, 64px); }
+.fhero-rose { background: linear-gradient(130deg, #9C3A55, #C9607B 55%, #E79DAD); }
+.fhero-lilac { background: linear-gradient(130deg, #52416C, #7D689F 55%, #B59FD6); }
+.fhero-mark { position: absolute; right: -90px; top: -110px; opacity: .1; color: #fff; pointer-events: none; }
+.fhero-word { position: absolute; left: 0; bottom: clamp(-26px, -1.6vw, -14px); width: 100%; font-family: var(--display); font-weight: 700; font-size: clamp(70px, 11vw, 160px); line-height: 1; letter-spacing: .06em; color: #fff; opacity: .06; white-space: nowrap; pointer-events: none; user-select: none; }
+.fhero-in { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.fhero-en { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; opacity: .92; margin-bottom: 8px; }
+.fhero-title { font-size: clamp(30px, 4.4vw, 52px); font-weight: 900; letter-spacing: .04em; line-height: 1.3; text-shadow: 0 3px 20px rgba(0, 0, 0, .2); }
+.fhero-catch { font-size: clamp(15px, 1.8vw, 20px); font-weight: 700; margin-top: 12px; opacity: .97; }
+.fhero-story { margin-top: 14px; display: grid; gap: 10px; }
+.fhero-story p { font-size: 13.5px; line-height: 2; opacity: .93; max-width: 44em; }
+.fhero-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; }
+.fhero-chips li { font-size: 12px; font-weight: 700; border: 1px solid rgba(255, 255, 255, .55); border-radius: 999px; padding: 4px 14px; background: rgba(255, 255, 255, .12); }
+.fhero-photo { margin: 0; border-radius: 22px; overflow: hidden; border: 6px solid rgba(255, 255, 255, .85); box-shadow: 0 18px 50px rgba(0, 0, 0, .25); transform: rotate(1.5deg); background: #fff; }
+.fhero-photo img { width: 100%; height: auto; display: block; }
+@media (max-width: 900px) {
+  .tokushu-grid { grid-template-columns: 1fr; }
+  .fhero-in { grid-template-columns: 1fr; }
+  .fhero-photo { max-width: 380px; margin-inline: auto; transform: none; }
+}
+@media (max-width: 720px) {
+  .tokushu-banner { min-height: 190px; }
+  .tb-bg img { opacity: .34; } /* 小画面は文字可読性優先で控えめに */
+}
+
 /* ---------- 診断バナー ---------- */
 .shindan-banner { position: relative; overflow: hidden; background: var(--ink); color: #fff; padding: clamp(26px, 4vw, 44px); }
 .shindan-banner--photo { display: block; }
