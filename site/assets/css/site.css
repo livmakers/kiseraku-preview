@@ -71,8 +71,8 @@ table { border-collapse: collapse; width: 100%; }
 .logo-mark-svg { color: var(--ink); flex: 0 0 auto; }
 .logo-text { display: grid; line-height: 1.2; }
 .logo-ja { font-family: var(--serif); font-size: 21px; font-weight: 600; letter-spacing: .1em; }
-.logo-en { font-size: 8.5px; font-weight: 500; letter-spacing: .42em; color: var(--ink-soft); margin-top: 1px; }
-.logo-sub { font-size: 10px; font-weight: 500; color: var(--ink-soft); letter-spacing: .14em; margin-left: 6px; }
+.logo-en { font-size: 11px; font-weight: 500; letter-spacing: .42em; color: var(--ink-soft); margin-top: 1px; }
+.logo-sub { font-size: 11px; font-weight: 500; color: var(--ink-soft); letter-spacing: .14em; margin-left: 6px; }
 .gnav ul { display: flex; gap: 2px; }
 .gnav a { display: grid; justify-items: center; gap: 0; padding: 8px 13px; text-decoration: none; color: var(--ink); border-radius: 3px; min-height: 48px; align-content: center; }
 .gnav a:hover { background: #fff; }
@@ -393,7 +393,7 @@ table { border-collapse: collapse; width: 100%; }
 .foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 30px; }
 .foot-logo { display: flex; align-items: center; gap: 10px; }
 .foot-logo .logo-ja { font-family: var(--serif); font-size: 24px; font-weight: 600; letter-spacing: .1em; }
-.foot-logo .logo-en { font-size: 9px; font-weight: 500; letter-spacing: .42em; color: var(--ink-soft); align-self: flex-end; margin-bottom: 6px; }
+.foot-logo .logo-en { font-size: 11px; font-weight: 500; letter-spacing: .42em; color: var(--ink-soft); align-self: flex-end; margin-bottom: 6px; }
 .foot-lead { font-size: 12px; color: var(--ink-soft); margin-top: 6px; }
 .foot-tel a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 20px; font-weight: 900; text-decoration: none; margin-top: 12px; font-variant-numeric: tabular-nums; }
 .foot-tel small { display: block; font-size: 11px; color: var(--ink-soft); }
