@@ -285,6 +285,11 @@ table { border-collapse: collapse; width: 100%; }
 .pd-desc { margin: 14px 0 6px; font-size: 14px; }
 .pd-cta { margin: 20px 0 8px; display: grid; gap: 10px; max-width: 420px; }
 .pd-note { font-size: 11.5px; color: var(--ink-soft); }
+.pd-pay { margin: 14px 0 4px; }
+.pd-pay .pay-label { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; margin-right: 10px; }
+.pd-pay .pay-chips { display: inline-flex; flex-wrap: wrap; gap: 5px; vertical-align: middle; }
+.pd-pay .pay-chip { border: 1px solid var(--line); background: #fff; padding: 2px 8px; font-size: 11px; font-weight: 600; letter-spacing: .04em; color: var(--ink-soft); border-radius: 4px; }
+.pd-pay small { display: block; margin-top: 6px; font-size: 11px; color: var(--ink-soft); line-height: 1.7; }
 .spec-table th { text-align: left; font-weight: 700; font-size: 12.5px; color: var(--ink-soft); padding: 10px 14px; width: 9em; background: var(--paper-alt); border-bottom: 2px solid #fff; vertical-align: top; }
 .spec-table td { padding: 10px 14px; font-size: 13.5px; border-bottom: 1px solid var(--line); }
 /* 特徴ボックス（商品トップ内のコンパクト商品紹介） */
@@ -325,7 +330,7 @@ table { border-collapse: collapse; width: 100%; }
 .variants { margin-top: 24px; }
 .variants-head { font-size: 12.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px; letter-spacing: .04em; }
 .variants-row { display: flex; flex-wrap: wrap; gap: 10px; }
-.variant-chip { display: grid; justify-items: center; gap: 4px; width: 84px; text-decoration: none; color: var(--ink-soft); font-size: 10.5px; text-align: center; }
+.variant-chip { display: grid; justify-items: center; gap: 4px; width: 84px; text-decoration: none; color: var(--ink-soft); font-size: 11px; text-align: center; }
 .variant-chip img { width: 72px; height: 72px; object-fit: cover; border: 1px solid var(--line); border-radius: 10px; background: #fff; transition: border-color .2s, transform .2s; }
 .variant-chip:hover img { border-color: var(--brand-deep); transform: translateY(-2px); }
 .variant-chip span { line-height: 1.4; }
